@@ -1,0 +1,41 @@
+.slideBar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 500px;
+    height: 5px;
+    background: rgba(49, 51, 63, 0.1);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    font-size: 14px;
+    top: -22px;  
+    border-radius: 2.5px;
+  }
+
+.slideBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: rgb(255, 75, 75);
+    border-radius: 50%; 
+    cursor: pointer;
+}
+
+.slider{
+    display: block;
+}
+
+.boundary {
+    display: flex;
+}
+
+.valueLeft {
+    margin-left: 0; 
+    margin-right: auto;
+}
+
+.valueRight {
+    margin-left: auto; 
+    margin-right: 0;
+}
+  

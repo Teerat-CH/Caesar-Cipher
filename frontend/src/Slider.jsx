@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './Slider.css'
 
 function Slider() {
     const [sliderValue, setSliderValue] = useState(2);
@@ -19,17 +20,23 @@ function Slider() {
     return (
         <div>
             <label>
-                Slider
-                <input 
-                    type='range'
-                    min={1}
-                    max={26} 
-                    step={1}
-                    value={sliderValue}
-                    onChange={handleSliderStatus}
-                />
+                <div className="slider">
+                    <div className='handleValue' style={{ marginLeft: `${(486/25)*(sliderValue-1)}px`}}>{ parseInt(sliderValue) }</div>
+                    <input
+                        className='slideBar'
+                        type='range'
+                        min={1}
+                        max={26} 
+                        step={1}
+                        value={sliderValue}
+                        onChange={handleSliderStatus}
+                    />
+                    <div className='boundary'>
+                        <p className="valueLeft">1</p>
+                        <p className="valueRight">26</p>
+                    </div>
+                </div>
             </label>
-            <p>{ sliderValue }</p>
         </div>
     );
 }
