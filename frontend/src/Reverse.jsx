@@ -2,25 +2,31 @@ import { useState } from 'react';
 import axios from 'axios';
 
 function Reverse() {
-    const [checkStatus, setCheckStatus] = useState(true);
+    const [reverseStatus, setReverseStatus] = useState(true);
     const [error, setError] = useState('');
 
-    const handleCheckStatus = async (event) => {
-        setCheckStatus(!checkStatus)
-        axios.post('http://localhost:5000/reverse', { checkStatus: checkStatus });
+    const handleReverseStatus = async (event) => {
+
+        try {
+            setReverseStatus(!reverseStatus)
+            axios.post('http://localhost:5000/reverse', { reverseStatus: reverseStatus });
+        } catch (error) {
+            console.error('Error', error);
+            setError('An error occurred while processing your request: Reverse.')
+        }
+
     }
 
     return (
         <div>
             <label>
-                Reverse?
+            reverse?
                 <input 
                     type = 'checkbox'
-                    checked = { checkStatus }
-                    onChange = {handleCheckStatus}
+                    checked = { !reverseStatus }
+                    onChange = {handleReverseStatus}
                 />
             </label>
-            <p>Is "My Value" checked? {checkStatus.toString()}</p>
         </div>
     )
 }
