@@ -20,12 +20,12 @@ function RemoveSpace() {
     return (
         <div>
             <label>
-                Remove Space?
                 <input 
                     type = 'checkbox'
                     checked = { !removeSpaceStatus }
                     onChange = {handleRemoveSpaceStatus}
                 />
+                Remove Space?
             </label>
         </div>
     )

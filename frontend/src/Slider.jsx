@@ -20,8 +20,9 @@ function Slider() {
     return (
         <div>
             <label>
+                Select Key
                 <div className="slider">
-                    <div className='handleValue' style={{ marginLeft: `${(486/25)*(sliderValue-1)}px`}}>{ parseInt(sliderValue) }</div>
+                    <div className='handleValue' style={{ marginLeft: `${((700-14)/25)*(sliderValue-1)}px`}}>{ parseInt(sliderValue) }</div>
                     <input
                         className='slideBar'
                         type='range'

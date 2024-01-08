@@ -20,12 +20,12 @@ function Reverse() {
     return (
         <div>
             <label>
-            reverse?
                 <input 
                     type = 'checkbox'
                     checked = { !reverseStatus }
                     onChange = {handleReverseStatus}
                 />
+                Reverse?
             </label>
         </div>
     )

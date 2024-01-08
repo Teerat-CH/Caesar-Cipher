@@ -1,0 +1,39 @@
+.Input {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.InputField {
+    height: 35px;
+    border-radius: 8px;
+    background-color: rgba(49, 51, 63, 0.08);
+    border: transparent;
+    font-size: 15px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 50%;
+    padding-inline-start: 8px;
+    padding-inline-end: 8px;
+}
+
+.InputField:focus {
+    outline-color: transparent;
+    border-color: rgb(24,24,24)
+}
+
+.button {
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    outline-color: black;
+    outline-width: 0px;
+}
+
+.text {
+    margin-top: 8px;
+    margin-bottom: 5px;
+}

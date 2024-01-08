@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import './InputField.css'
 
 function Decrypt() {
   const [inputText, setInputText] = useState('');
@@ -28,18 +29,17 @@ function Decrypt() {
   return (
     <div>
       <form onSubmit={handleDecryptSubmit}>
-        <label>
-          Enter text:
-          <input type="text" value={inputText} onChange={handleDecryptInputChange} />
-        </label>
-        <button type="submit">Decrypt</button>
+        <div className='Input'>
+          <p1 className='text'>Enter text to decrypt:</p1>
+          <input className='InputField' type="text" value={inputText} onChange={handleDecryptInputChange} />
+          <button className='button' type="submit">Decrypt</button>
+        </div>
       </form>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {transformedText && (
         <div>
-          <p>Transformed Text:</p>
-          <p>{transformedText}</p>
+          <p><b>Result</b>: {transformedText}</p>
         </div>
       )}
     </div>

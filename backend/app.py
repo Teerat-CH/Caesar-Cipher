@@ -11,7 +11,7 @@ features = {
 }
 
 key = {
-    'sliderValue' : 1
+    'sliderValue' : 2
 }
 
 @app.route('/slider', methods=['POST'])

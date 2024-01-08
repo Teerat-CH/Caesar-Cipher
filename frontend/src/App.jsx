@@ -11,12 +11,19 @@ import RemoveSpace from './RemoveSpace.jsx'
 function App() {
   
   return (
-    <div className='mainPage'>
+    <div className='mainPage'> 
+    <div className='header'>
+      <h1>Caesar Cipher</h1>
+    </div>
       <Slider/>
-      <Reverse />
-      <RemoveSpace />
-      <Encrypt />
-      <Decrypt />
+      <div className='features'>
+        <Reverse />
+        <RemoveSpace />
+      </div>
+      <div className='function'>
+        <Encrypt />
+        <Decrypt />
+      </div>
     </div>
   );
 }
