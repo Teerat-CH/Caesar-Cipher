@@ -39,7 +39,7 @@ function Encrypt() {
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {transformedText && (
         <div>
-          <p><b>Result</b> {transformedText}</p>
+          <p className='output'>{transformedText}</p>
         </div>
       )}
     </div>

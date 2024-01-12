@@ -1,14 +1,13 @@
 .slideBar {
     -webkit-appearance: none;
     appearance: none;
-    width: 700px;
+    width: 800px;
     height: 5px;
     background: rgba(49, 51, 63, 0.1);
     outline: none;
     -webkit-transition: .2s;
     transition: opacity .2s;
     font-size: 14px;
-    top: -22px;  
     border-radius: 2.5px;
   }
 
@@ -29,15 +28,18 @@
 .boundary {
     display: flex;
     width: 100%;
+    margin-top: 0%;
 }
 
 .valueLeft {
     margin-left: 0; 
     margin-right: auto;
+    margin-top: -5px;
 }
 
 .valueRight {
     margin-left: auto; 
     margin-right: 0;
+    margin-top: -5px;
 }
   
