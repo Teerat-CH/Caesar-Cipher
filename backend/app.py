@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from CeasarCipher import CaesarCipher
+from FormatString import FormatString
 
 app = Flask(__name__)
 CORS(app)
@@ -50,6 +51,7 @@ def decrypt_text():
     removeSpace_value = features['removeSpaceStatus']
     slider_value = key['sliderValue']
     transformed_text = CaesarCipher(text, -slider_value, reverse_value, removeSpace_value)
+    transformed_text = FormatString(transformed_text)
     return jsonify({'transformed_text': transformed_text})
 
 if __name__ == '__main__':
