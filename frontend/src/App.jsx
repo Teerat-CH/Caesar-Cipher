@@ -29,12 +29,11 @@ function App() {
         </div>
         <div className='noteBoundary'>
           <p className='note'>
-            *Abbreviations, floating points, and possessive forms may cause the program to add spaces to text incorrectly.
+            *Abbreviations, floating points, and possessive forms may cause the program to add spaces incorrectly.
           </p>
           <Decrypt />
         </div>
       </div>
-      
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import math
+from CapitalizeNamedEntity import CapitalizeNamedEntity
 
 specialCharacters = [".", "," , ":", ";", "!", "?"]
 sentenceEnding = [".", "?", "!"]
@@ -169,5 +170,6 @@ def FormatString(String):
     # Capitalized every letter i
 
     capitalizedSentences = capitalizedSentences.replace(" i ", " I ")
+    capitalizedSentences = CapitalizeNamedEntity(capitalizedSentences)
 
     return capitalizedSentences
