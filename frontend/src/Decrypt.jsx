@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
-import './InputField.css'
+import './InputField.css';
 
 function Decrypt() {
   const [inputText, setInputText] = useState('');
   const [transformedText, setTransformedText] = useState('');
   const [error, setError] = useState('');
-  
 
   const handleDecryptInputChange = (event) => {
     setInputText(event.target.value);
@@ -21,7 +20,7 @@ function Decrypt() {
       setError('');
     } catch (error) {
       console.error('Error:', error);
-      setError('An error occurred while processing your request.');
+      setError('');
       setTransformedText('');
     }
   };
@@ -30,21 +29,18 @@ function Decrypt() {
     <div>
       <form onSubmit={handleDecryptSubmit}>
         <div className='Input'>
-          <p1 className='text'>Enter text to decrypt:</p1>
+          <p1 className='text'>Enter text to <b>Decrypt</b>:</p1>
           <input className='InputField' type="text" value={inputText} onChange={handleDecryptInputChange} />
           <button className='button' type="submit">Decrypt</button>
         </div>
       </form>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {transformedText && (
-        <div>
-          <p className='output'>{transformedText}</p>
-        </div>
-      )}
+      <div className='output-box'>
+        <p className='output'>{transformedText}</p>
+      </div>
     </div>
   );
-  
 }
 
 export default Decrypt;

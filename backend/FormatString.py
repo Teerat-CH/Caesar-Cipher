@@ -83,17 +83,6 @@ def segmentWithOneGram(String):
         
     return max(allSegmentations, key = sequenceProbability)
 
-@memorized
-def segment(String):
-    result = []
-
-    StringSegmentBySpecialCharacter = segmentBySpecialCharacter(String, specialCharacters)
-
-    for element in StringSegmentBySpecialCharacter:
-        result.append(segmentWithOneGram(element))
-
-    return flattenOneLayer(result)
-
 def segmentBySpecialCharacter(String, listOfSpecialCharacter):
 
     if String == '':
@@ -106,6 +95,45 @@ def segmentBySpecialCharacter(String, listOfSpecialCharacter):
     tail = String[i+1:]
 
     return [head] + segmentBySpecialCharacter(tail, listOfSpecialCharacter)
+
+def separateTextByNumber(string):
+    if string == '':
+        return []
+    
+    for i in range(len(string)):
+        if string[i].isnumeric():
+            numberCount = 1
+            while string[i+numberCount].isnumeric():
+                numberCount += 1
+            return [string[:i]] + [string[i:i+numberCount]] + separateTextByNumber(string[i+numberCount:])
+    
+    return [string]
+
+def segmentByNumber(list):
+    resultList = []
+    for element in list:
+        resultList.append(separateTextByNumber(element))
+    
+    resultList = flattenOneLayer(resultList)
+
+    if '' in resultList:
+        resultList.remove('')
+        
+    return resultList
+
+@memorized
+def segment(String):
+    result = []
+
+    StringSegmentBySpecialCharacter = segmentBySpecialCharacter(String, specialCharacters)
+    StringSegmentByNumber = segmentByNumber(StringSegmentBySpecialCharacter)
+
+    for element in StringSegmentByNumber:
+        result.append(segmentWithOneGram(element))
+
+    result = flattenOneLayer(result)
+
+    return result
 
 #---------------------------------------------------------#
 

@@ -30,18 +30,16 @@ function Encrypt() {
     <div>
       <form onSubmit={handleEncryptSubmit}>
         <div className='Input'>
-          <p1 className='text'>Enter text to encrypt:</p1>
+          <p1 className='text'>Enter text to <b>Encrypt</b>:</p1>
           <input className='InputField' type="text" value={inputText} onChange={handleEncryptInputChange} />
           <button className='button' type="submit">Encrypt</button>
         </div>
       </form>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {transformedText && (
-        <div>
-          <p className='output'>{transformedText}</p>
-        </div>
-      )}
+      <div className='output-box'>
+        <p className='output'>{transformedText}</p>
+      </div>
     </div>
   );
   

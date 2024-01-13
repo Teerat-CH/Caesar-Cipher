@@ -1,7 +1,7 @@
 body {
   margin: 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
   position: inherit;
@@ -9,8 +9,6 @@ body {
 
 .mainPage {
   text-align: left;
-  margin-top: -100px;
-  
 }
 
 .header {
@@ -27,4 +25,15 @@ body {
 .function {
   display: flex;
   justify-content: space-evenly;
+}
+
+.note {
+  color: red;
+  width: 380px;
+  font-size: small;
+  padding-top: 0%;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
 }

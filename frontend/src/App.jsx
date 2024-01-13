@@ -12,18 +12,27 @@ function App() {
   
   return (
     <div className='mainPage'> 
-    <div className='header'>
-      <h1>Caesar Cipher</h1>
-    </div>
+
+      <div className='header'>
+        <h1>Caesar Cipher</h1>
+      </div>
+
       <Slider/>
-      <div className='features'>
-        <Reverse />
-        <RemoveSpace />
-      </div>
+
       <div className='function'>
-        <Encrypt />
-        <Decrypt />
+        <div className='features'>
+          <Reverse />
+          <RemoveSpace />
+          <Encrypt />
+        </div>
+        <div className='noteBoundary'>
+          <p className='note'>
+            *Abbreviations, floating points, and possessive forms may cause the program to add space to sentences incorrectly.
+          </p>
+          <Decrypt />
+        </div>
       </div>
+      
     </div>
   );
 }

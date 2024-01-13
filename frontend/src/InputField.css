@@ -29,8 +29,8 @@
     width: fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
-    outline-color: black;
-    outline-width: 0px;
+    border-color: rgba(49, 51, 63, 0.3);
+    background-color: transparent;
 }
 
 .text {
@@ -44,4 +44,27 @@
     border-radius: 8px;
     border-color: rgb(24,24,24);
     margin-left: 10px;
+}
+
+.output-box {
+    width: 380px;
+    height: 150px;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid rgb(24, 24, 24);
+    border-radius: 8px;
+    margin-top: -4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    background-color: rgba(49, 51, 63, 0.08);
+    border: transparent;
+    font-size: 15px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 50%;
+}
+  
+.output {
+    margin: 0;
+    padding: 8px;
 }
