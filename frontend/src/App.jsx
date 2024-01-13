@@ -14,7 +14,9 @@ function App() {
     <div className='mainPage'> 
 
       <div className='header'>
-        <h1>Caesar Cipher</h1>
+        <a href="https://en.wikipedia.org/wiki/Caesar_cipher">
+          <h1>Caesar Cipher</h1>
+        </a>
       </div>
 
       <Slider/>
@@ -27,7 +29,7 @@ function App() {
         </div>
         <div className='noteBoundary'>
           <p className='note'>
-            *Abbreviations, floating points, and possessive forms may cause the program to add space to sentences incorrectly.
+            *Abbreviations, floating points, and possessive forms may cause the program to add spaces to text incorrectly.
           </p>
           <Decrypt />
         </div>
