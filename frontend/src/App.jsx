@@ -7,6 +7,7 @@ import Decrypt from './Decrypt.jsx'
 import Reverse from './Reverse.jsx'
 import RemoveSpace from './RemoveSpace.jsx'
 
+axios.defaults.baseURL='https://teechan.pythonanywhere.com'
 
 function App() {
   

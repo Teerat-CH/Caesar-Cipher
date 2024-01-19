@@ -16,7 +16,7 @@ function Encrypt() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/encrypt', { text: inputText });
+      const response = await axios.post('/encrypt', { text: inputText });
       setTransformedText(response.data.transformed_text);
       setError('');
     } catch (error) {

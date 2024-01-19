@@ -9,7 +9,7 @@ function Reverse() {
 
         try {
             setReverseStatus(!reverseStatus)
-            axios.post('http://localhost:5000/reverse', { reverseStatus: reverseStatus });
+            axios.post('/reverse', { reverseStatus: reverseStatus });
         } catch (error) {
             console.error('Error', error);
             setError('An error occurred while processing your request: Reverse.')

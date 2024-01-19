@@ -1,6 +1,6 @@
 import spacy
 
-NER = spacy.load("en_core_web_lg")
+NER = spacy.load("en_core_web_md")
 
 def CapitalizeNamedEntity(string):
   nerString = NER(string)

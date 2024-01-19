@@ -9,7 +9,7 @@ function RemoveSpace() {
 
         try {
             setRemoveSpaceStatus(!removeSpaceStatus)
-            axios.post('http://localhost:5000/removeSpace', { removeSpaceStatus: removeSpaceStatus });
+            axios.post('/removeSpace', { removeSpaceStatus: removeSpaceStatus });
         } catch (error) {
             console.error('Error', error);
             setError('An error occurred while processing your request: Remove Space.')

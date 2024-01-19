@@ -10,7 +10,7 @@ function Slider() {
         try {
             const currentValue = event.target.value;
             setSliderValue(event.target.value);
-            axios.post('http://localhost:5000/slider', { sliderValue: currentValue });
+            axios.post('/slider', { sliderValue: currentValue });
         } catch (error) {
             console.error('Error', error);
             setError('An error occurred while processing your request: Slider).');
